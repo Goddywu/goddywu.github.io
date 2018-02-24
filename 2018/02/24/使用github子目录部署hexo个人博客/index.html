@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>使用github子目录部署hexo个人博客 | Goddy&#39;s Blog</title>
+  <meta name="author" content="Goddy">
+  
+  <meta name="description" content="Goddy的博客">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="使用github子目录部署hexo个人博客"/>
+  <meta property="og:site_name" content="Goddy&#39;s Blog"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <!-- <link href="/http://ozvhktw7l.bkt.clouddn.com/Miffy.ico" rel="icon"> -->
+    <link href="http://ozvhktw7l.bkt.clouddn.com/Miffy.ico" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-70812759-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?cb5448498d7169c668b07c2b255d62c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Goddy&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> 使用github子目录部署hexo个人博客</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">序：</span><br><span class="line">作为一个孤家寡人，自称孤和寡人不为过吧。🙄</span><br><span class="line">寡人，在网上浏览了很多关于如何在github部署hexo的文章，</span><br><span class="line">但是都是在github为我们分配的二级域名根目录下，例如https://goddywu.github.io/</span><br><span class="line">如果我想blog子目录下部署呢（https://goddywu.github.io/blog/）</span><br><span class="line">读完这篇文章相信您就会了解。</span><br></pre></td></tr></table></figure>
+<h2 id="一、安装环境"><a href="#一、安装环境" class="headerlink" title="一、安装环境"></a>一、安装环境</h2><p><strong>1. nodejs</strong><br>安装：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">官网下载页</a><br>验证：$ node -v,   $ npm -v 查看node及npm的版本<br><strong>2. git</strong><br>安装：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网下载页</a><br>验证：$ git –version 查看git的版本<br><strong>3. hexo-cli</strong><br>安装： $ cnpm install hexo-cli -g<br>验证：$ hexo -v 检查hexo的版本</p>
+<h2 id="二、hexo-cli脚手架的使用"><a href="#二、hexo-cli脚手架的使用" class="headerlink" title="二、hexo-cli脚手架的使用"></a>二、hexo-cli脚手架的使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ cd test  #打开存放项目的目录</span><br><span class="line">$ hexo init my-blog  #下载模版项目</span><br><span class="line">$ cd my-blog  #打开模板项目目录</span><br><span class="line">$ cnpm install  #下载相关依赖的包</span><br><span class="line">$ cnpm install hexo-deployer-git --save  #安装扩展包</span><br><span class="line">$ hexo generate / hexo g  #生成静态文件</span><br><span class="line">$ hexo server / hexo s  [-i 127.0.0.1] [-p 4000]#默认在本地的4000端口启动项目</span><br><span class="line">control + C  #终止运行</span><br><span class="line">$ hexo deploy / hexo d  #将.deploy目录部署 [到Github]</span><br><span class="line">$ hexo g -d / hexo d -g  #生成完毕后自动部署</span><br></pre></td></tr></table></figure>
+<h2 id="三、操作步骤"><a href="#三、操作步骤" class="headerlink" title="三、操作步骤"></a>三、操作步骤</h2><h4 id="1-github操作"><a href="#1-github操作" class="headerlink" title="1. github操作"></a>1. github操作</h4><ul>
+<li>github新建项目，名称为blog</li>
+<li>修改已创建好的hexo项目中的_config.yml文件<img src="http://upload-images.jianshu.io/upload_images/7691672-10c91cc7e9e1f42c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><img src="http://upload-images.jianshu.io/upload_images/7691672-6de8aa1b0c8c5989.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>终端执行 $ hexo g -d</li>
+<li>打开github我们的项目地址</li>
+<li>选择setting</li>
+<li>找到GitHub Pages勾选master branch</li>
+</ul>
+<p>至此，博客就可以访问了，示例网址：<br>  <a href="https://goddywu.github.io/blog/">https://goddywu.github.io/blog/</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="http://nodejs.cn/" target="_blank" rel="noopener">node官网</a></li>
+<li><a href="http://www.runoob.com/nodejs/nodejs-tutorial.html" target="_blank" rel="noopener">菜鸟教程node趴</a></li>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">git官方网址</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的官方网站</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官网</a></li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+
+    
+    
+    <a href="/2018/02/25/echarts的事件引入（一）/" type="button" class="btn btn-default"><i
+                class="fa fa-arrow-circle-o-left"></i> Prev</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2018/02/24/使用gitlab部署hexo/" type="button" class="btn btn-default ">Next<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">Comments</h2>
+
+    
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2018-02-24 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/git/">git<span>3</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/hexo/">hexo<span>2</span></a></li> <li><a href="/tags/github/">github<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+		   <span class="toc-title">Contents</span>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#一、安装环境"><span class="toc-article-text">一、安装环境</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#二、hexo-cli脚手架的使用"><span class="toc-article-text">二、hexo-cli脚手架的使用</span></a></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#三、操作步骤"><span class="toc-article-text">三、操作步骤</span></a><ol class="toc-article-child"><li class="toc-article-item toc-article-level-4"><a class="toc-article-link" href="#1-github操作"><span class="toc-article-text">1. github操作</span></a></li></ol></li></ol></li><li class="toc-article-item toc-article-level-2"><a class="toc-article-link" href="#参考资料"><span class="toc-article-text">参考资料</span></a></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  Copyright &copy; 2017-2018 All Rights Reserved Goddy &trade;
+  
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
