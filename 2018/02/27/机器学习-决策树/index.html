@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>机器学习(决策树) | Goddy&#39;s Blog</title>
+  <meta name="author" content="Goddy">
+  
+  <meta name="description" content="Goddy的博客">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="机器学习(决策树)"/>
+  <meta property="og:site_name" content="Goddy&#39;s Blog"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <!-- <link href="/http://ozvhktw7l.bkt.clouddn.com/Miffy.ico" rel="icon"> -->
+    <link href="http://ozvhktw7l.bkt.clouddn.com/Miffy.ico" rel="icon">
+  
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-70812759-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?cb5448498d7169c668b07c2b255d62c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Goddy&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> 机器学习(决策树)</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>决策树(decision tree)，也称为判定树，是一类常见的机器学习的方法。<br>一般，一棵决策树包含<code>1个根节点</code>,<code>若干内部结点</code>,<code>若干叶结点</code>。叶结点对应决策结果，其他每个结点对应一个属性测试，根结点包含样本全集。</p>
+<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>决策树学习的目的是为了产生一棵泛化能力强(处理未见示例的能力强)的决策树，基本流程遵循简单且直观的<code>分而治之(divide-and-conquer)</code>策略。</p>
+<h1 id="简单示例"><a href="#简单示例" class="headerlink" title="简单示例"></a>简单示例</h1><p><img src="http://upload-images.jianshu.io/upload_images/7691672-ff60864f68f9d36d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p>上图完整表达了这个女孩决定是否见一个约会对象的策略，其中绿色节点表示判断条件，橙色节点表示决策结果，箭头表示在一个判断条件在不同情况下的决策路径，图中红色箭头表示了上面例子中女孩的决策过程。<br> <br>这幅图基本可以算是一颗决策树，说它“基本可以算”是因为图中的判定条件没有量化，如收入高中低等等，还不能算是严格意义上的决策树，如果将所有条件量化，则就变成真正的决策树了。</p>
+</blockquote>
+<h1 id="划分选择"><a href="#划分选择" class="headerlink" title="划分选择"></a>划分选择</h1><p>决策树的生成是一个递归的过程。决策树的学习关键在于如何选择最优划分属性。随着划分过程的不断进行，我们希望决策树的分支节点包含的样本尽可能属于同一类，即结点的纯度(purity)越来越高。那么<code>度量样本集合纯度</code>的指标是什么呢？</p>
+<ul>
+<li><a href="https://zh.wikipedia.org/zh-hans/%E7%86%B5_(%E4%BF%A1%E6%81%AF%E8%AE%BA" target="_blank" rel="noopener">信息熵(information entropy)</a>)是常用的一种指标。信息熵的值越小，样本集合的纯度越高。<br><img src="http://upload-images.jianshu.io/upload_images/7691672-11aa5359d5ea6d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>1.<a href="">信息增益(information gain)</a>越大，就意味着使用属性a来划分所获得的纯度提升越大。信息增益准则对可取值数目较多的属性有所偏好。<br><em>注：信息增益 = 分类前信息熵 - 分类后信息熵</em></li>
+<li>2.<a href="">增益率(intrinsic value)</a>. C4.5决策树算法采用的。增益率对可取值数目较少的属性有所偏好，因此，C4.5决策树算法不是直接选择增益率最大的候选划分属性，而是先从候选划分属性中找出信息增益高于平均水平的属性，再从中选择增益率最高的。</li>
+<li>3.<a href="">基尼指数(Gini index)</a>. 基尼值越小，数据集的纯度越高。</li>
+</ul>
+<h1 id="剪枝处理-pruning"><a href="#剪枝处理-pruning" class="headerlink" title="剪枝处理(pruning)"></a>剪枝处理(pruning)</h1><p>剪枝是决策树学习算法对付 <strong>过拟合</strong>(决策树分支过多，把训练集的特点当作所有数据都具有的一般性质)的主要手段。</p>
+<ul>
+<li>预剪枝(prepruning)： 决策树在生成的过程中，对于每个结点在划分前进行估计，若当前结点的划分不能带来决策树泛化性能提升，则停止划分并将当前结点标记为叶结点。<ul>
+<li>优点：降低了过拟合的风险，显著减少了决策树的训练时间开销和测试时间开销</li>
+<li>缺点：可能导致欠拟合</li>
+</ul>
+</li>
+<li>后剪枝(postpruning)：先从训练集生成一棵完整的决策树，然后自底向上地对非叶结点进行考察，若将该结点对应的子树替换为叶结点能带来决策树泛化性能提升，则将该子树替换为叶结点。后剪枝决策树比预剪枝决策树保留了更多的分支。<ul>
+<li>优点：后剪枝决策树的欠拟合风险较小，泛化性能往往优于预测剪枝决策树。</li>
+<li>缺点：需要自底向上对树中的所有非叶结点进行逐一考察，训练时间开销大得多。</li>
+</ul>
+</li>
+</ul>
+<h1 id="如何判断决策树泛化性能是否提升呢？"><a href="#如何判断决策树泛化性能是否提升呢？" class="headerlink" title="如何判断决策树泛化性能是否提升呢？"></a>如何判断决策树泛化性能是否提升呢？</h1><p>  待填坑。。。</p>
+<h1 id="连续与缺失值处理"><a href="#连续与缺失值处理" class="headerlink" title="连续与缺失值处理"></a>连续与缺失值处理</h1><p><strong>1. 连续值处理</strong><br>=&gt; 连续属性离散化技术  =&gt; 二分法(bi-partition)<br><strong>2. 缺失值处理</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(1)如何在属性值缺失的情况下进行划分属性选择？</span><br><span class="line">(2)给定划分属性，若样本在该属性上的值缺失，如何对样本进行划分？</span><br></pre></td></tr></table></figure></p>
+<h1 id="多变量决策树"><a href="#多变量决策树" class="headerlink" title="多变量决策树"></a>多变量决策树</h1><p><a href="http://bealin.github.io/2017/02/27/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E2%80%945-%E5%86%B3%E7%AD%96%E6%A0%91/" target="_blank" rel="noopener">可参考BeaLin’s Blog，她摘选的机器学习原文</a></p>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
+<li><a href="http://www.cnblogs.com/leoo2sk/archive/2010/09/19/decision-tree.html" target="_blank" rel="noopener">博客园 - T2噬菌体的博客</a></li>
+<li><a href="https://zh.wikipedia.org" target="_blank" rel="noopener">维基百科</a></li>
+</ul>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+
+    
+    
+    <a type="button" class="btn btn-default disabled"><i class="fa fa-arrow-circle-o-left"></i>Prev</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2018/02/26/html表格自动合并/" type="button" class="btn btn-default ">Next<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">Comments</h2>
+
+    
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2018-02-27 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/读书笔记/">读书笔记<span>1</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	   <a data-toggle="collapse" data-target="#toc"><i class="fa fa-bars"></i></a>
+	   <div id="toc" class="toc collapse in">
+		   <span class="toc-title">Contents</span>
+			<ol class="toc-article"><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#介绍"><span class="toc-article-text">介绍</span></a></li><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#目的"><span class="toc-article-text">目的</span></a></li><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#简单示例"><span class="toc-article-text">简单示例</span></a></li><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#划分选择"><span class="toc-article-text">划分选择</span></a></li><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#剪枝处理-pruning"><span class="toc-article-text">剪枝处理(pruning)</span></a></li><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#如何判断决策树泛化性能是否提升呢？"><span class="toc-article-text">如何判断决策树泛化性能是否提升呢？</span></a></li><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#连续与缺失值处理"><span class="toc-article-text">连续与缺失值处理</span></a></li><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#多变量决策树"><span class="toc-article-text">多变量决策树</span></a></li><li class="toc-article-item toc-article-level-1"><a class="toc-article-link" href="#参考文档"><span class="toc-article-text">参考文档</span></a></li></ol>
+		</div>
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  
+  Copyright &copy; 2017-2018 All Rights Reserved Goddy &trade;
+  
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
