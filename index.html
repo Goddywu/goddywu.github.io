@@ -133,64 +133,11 @@ var _hmt = _hmt || [];
 <div class="row">
 	<div class="col-md-8">
 		<h3 class="title">
-			<a href="/2018/03/03/JanusGraph的介绍-优势/" >JanusGraph的介绍&amp;优势</a>
+			<a href="/2018/03/08/github-pages绑定域名/" title="喜欢的女生🚺结婚了，对方却不是我😯">github pages绑定域名</a>
 		</h3>
 		</div>
 	<div class="col-md-4">
-		<div class="date">post @ 2018-03-03  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>JanusGraph的设计是为了支持处理那些需要大量存储空间和强大的计算能力的图形。它的基本优点是大规模数据的实时遍历和分析查询。<br>JanusGraph支持多个非常大的图形，支持大量并发事务和运行图计算。</p>
-<ul>
-<li>它的事务处理能力兼容集群中的多台机器并可以以毫秒为单位回答了大型图表上复杂的遍历查询。</li>
-<li>它通过Hadoop的框架支持全局的图形分析和图的批量处理。</li>
-</ul>
-<blockquote>
-<p>JanusGraph是一个图数据库引擎. JanusGraph集中在图的序列化, 图的数据模型和高效的查询. 此外JanusGraph依赖hadoop来做图的统计和批量图操作. JanusGraph为数据存储,索引和客户端访问实现了粗粒度的模块接口. JanusGraph的模块架构能和和许多存储,索引,客户端技术集成. 可以简便的扩展新的功能<br><br>JanusGraph标准支持下列存储适配和索引适配, 同时也支持第三方适配<br>数据存储<br>· Apache Cassandra<br>· Apache HBase<br>· Oracle Berkeley DB Java Edition<br><br>索引, 加快查询和复杂查询<br> · Elasticsearch<br>· Apache Solr<br>· Apache Lucene<br>通常, 应用通过两种方法与JanusGraph交互<br>当从本地或者远程检索数据, 内嵌在应用中的JanusGraph,运行Gremlin查询, JanusGraph缓存和事务处理和应用在同一个JVM上,<br>通过提交Gremlin查询, 和本地或者远程的JanusGraph实例交互, JanusGraph原生支持Gremlin Server 组件(TinkerPop stack)</p>
-</blockquote>
-<h1 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h1><p><img src="http://upload-images.jianshu.io/upload_images/7691672-7f70b089c132eb71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><ol>
-<li><a href="https://github.com/JanusGraph/janusgraph/releases" target="_blank" rel="noopener">下载地址</a></li>
-<li>解压并在终端打开<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ bin/janusgraph.sh start</span><br><span class="line">$ bin/gremlin.sh</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><em>注：JanusGraph自带了一个可以开箱使用的JanusServer，里面集成了简化的cassandra和ES，不能作为生产环境，但可以用来学习使用JanusServer</em></p>
-<ol>
-<li>测试<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ graph = JanusGraphFactory.open(&apos;conf/janusgraph-cassandra-es.properties&apos;)</span><br><span class="line">$ GraphOfTheGodsFactory.load(graph)</span><br><span class="line">$ g = graph.traversal()</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
-<li><a href="https://github.com/JanusGraph/janusgraph" target="_blank" rel="noopener">github - JanusGraph</a></li>
-<li><a href="http://blog.csdn.net/landebug/article/details/78984277" target="_blank" rel="noopener">csdn - landebug的博客</a></li>
-<li><a href="http://docs.janusgraph.org/latest/" target="_blank" rel="noopener">JanusGraph官网</a></li>
-<li><a href="https://www.cnblogs.com/jiyuqi/p/320267ff0b5052fad4613945e58ea1f1.html" target="_blank" rel="noopener">cnblogs - 且听风吟的博客</a></li>
-<li><a href="http://blog.csdn.net/qq_32662595/article/details/78656108" target="_blank" rel="noopener">csdn - 瑜兮 - JanusGraph之事务处理</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2018/03/03/JanusGraph的介绍-优势/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/03/02/github-pages绑定域名/" title="喜欢的女生🚺结婚了，对方却不是我😯">github pages绑定域名</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-03-02  </div>
+		<div class="date">post @ 2018-03-08  </div>
 		</div>
 	</div>
 	
@@ -271,7 +218,60 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2018/03/02/github-pages绑定域名/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2018/03/08/github-pages绑定域名/#more" class="btn btn-default more">閱讀本文</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2018/03/03/JanusGraph的介绍-优势/" >JanusGraph的介绍&amp;优势</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-03-03  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>JanusGraph的设计是为了支持处理那些需要大量存储空间和强大的计算能力的图形。它的基本优点是大规模数据的实时遍历和分析查询。<br>JanusGraph支持多个非常大的图形，支持大量并发事务和运行图计算。</p>
+<ul>
+<li>它的事务处理能力兼容集群中的多台机器并可以以毫秒为单位回答了大型图表上复杂的遍历查询。</li>
+<li>它通过Hadoop的框架支持全局的图形分析和图的批量处理。</li>
+</ul>
+<blockquote>
+<p>JanusGraph是一个图数据库引擎. JanusGraph集中在图的序列化, 图的数据模型和高效的查询. 此外JanusGraph依赖hadoop来做图的统计和批量图操作. JanusGraph为数据存储,索引和客户端访问实现了粗粒度的模块接口. JanusGraph的模块架构能和和许多存储,索引,客户端技术集成. 可以简便的扩展新的功能<br><br>JanusGraph标准支持下列存储适配和索引适配, 同时也支持第三方适配<br>数据存储<br>· Apache Cassandra<br>· Apache HBase<br>· Oracle Berkeley DB Java Edition<br><br>索引, 加快查询和复杂查询<br> · Elasticsearch<br>· Apache Solr<br>· Apache Lucene<br>通常, 应用通过两种方法与JanusGraph交互<br>当从本地或者远程检索数据, 内嵌在应用中的JanusGraph,运行Gremlin查询, JanusGraph缓存和事务处理和应用在同一个JVM上,<br>通过提交Gremlin查询, 和本地或者远程的JanusGraph实例交互, JanusGraph原生支持Gremlin Server 组件(TinkerPop stack)</p>
+</blockquote>
+<h1 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h1><p><img src="http://upload-images.jianshu.io/upload_images/7691672-7f70b089c132eb71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><ol>
+<li><a href="https://github.com/JanusGraph/janusgraph/releases" target="_blank" rel="noopener">下载地址</a></li>
+<li>解压并在终端打开<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ bin/janusgraph.sh start</span><br><span class="line">$ bin/gremlin.sh</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><em>注：JanusGraph自带了一个可以开箱使用的JanusServer，里面集成了简化的cassandra和ES，不能作为生产环境，但可以用来学习使用JanusServer</em></p>
+<ol>
+<li>测试<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ graph = JanusGraphFactory.open(&apos;conf/janusgraph-cassandra-es.properties&apos;)</span><br><span class="line">$ GraphOfTheGodsFactory.load(graph)</span><br><span class="line">$ g = graph.traversal()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="https://github.com/JanusGraph/janusgraph" target="_blank" rel="noopener">github - JanusGraph</a></li>
+<li><a href="http://blog.csdn.net/landebug/article/details/78984277" target="_blank" rel="noopener">csdn - landebug的博客</a></li>
+<li><a href="http://docs.janusgraph.org/latest/" target="_blank" rel="noopener">JanusGraph官网</a></li>
+<li><a href="https://www.cnblogs.com/jiyuqi/p/320267ff0b5052fad4613945e58ea1f1.html" target="_blank" rel="noopener">cnblogs - 且听风吟的博客</a></li>
+<li><a href="http://blog.csdn.net/qq_32662595/article/details/78656108" target="_blank" rel="noopener">csdn - 瑜兮 - JanusGraph之事务处理</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2018/03/03/JanusGraph的介绍-优势/#more" class="btn btn-default more">閱讀本文</a>
 </div>
 
 		
@@ -331,7 +331,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2018/02/27/机器学习-决策树/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2018/02/27/机器学习-决策树/#more" class="btn btn-default more">閱讀本文</a>
 </div>
 
 		
@@ -384,7 +384,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2018/02/26/html表格自动合并/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2018/02/26/html表格自动合并/#more" class="btn btn-default more">閱讀本文</a>
 </div>
 
 		
@@ -441,7 +441,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2018/02/25/echarts的事件引入（一）/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2018/02/25/echarts的事件引入（一）/#more" class="btn btn-default more">閱讀本文</a>
 </div>
 
 		
@@ -487,7 +487,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2018/02/24/使用github子目录部署hexo个人博客/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2018/02/24/使用github子目录部署hexo个人博客/#more" class="btn btn-default more">閱讀本文</a>
 </div>
 
 		
@@ -546,7 +546,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2018/02/24/使用gitlab部署hexo/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2018/02/24/使用gitlab部署hexo/#more" class="btn btn-default more">閱讀本文</a>
 </div>
 
 		
@@ -585,7 +585,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2018/02/24/gitlab部署vue项目/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2018/02/24/gitlab部署vue项目/#more" class="btn btn-default more">閱讀本文</a>
 </div>
 
 		
@@ -614,7 +614,7 @@ var _hmt = _hmt || [];
 			
   <div id="site_search">
    <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜尋" class="st-search-input st-default-search-input form-control"/>
    </div>  
   <div id="local-search-result"></div>
   </div>
@@ -623,7 +623,7 @@ var _hmt = _hmt || [];
 		
 			
 	<div class="widget">
-		<h4>Categories</h4>
+		<h4>分類</h4>
 		<ul class="tag_box inline list-unstyled">
 		
 			<li><a href="/categories/database/">database<span>1</span></a></li>
@@ -642,24 +642,24 @@ var _hmt = _hmt || [];
 		
 			
 	<div class="widget">
-		<h4>Tag Cloud</h4>
+		<h4>標籤雲</h4>
 		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/github/">github<span>2</span></a></li>
-		
-			<li><a href="/tags/gitlab/">gitlab<span>2</span></a></li>
-		
-			<li><a href="/tags/echarts/">echarts<span>1</span></a></li>
 		
 			<li><a href="/tags/event/">event<span>1</span></a></li>
 		
-			<li><a href="/tags/hexo/">hexo<span>2</span></a></li>
-		
 			<li><a href="/tags/vue/">vue<span>1</span></a></li>
+		
+			<li><a href="/tags/echarts/">echarts<span>1</span></a></li>
+		
+			<li><a href="/tags/github/">github<span>2</span></a></li>
 		
 			<li><a href="/tags/html/">html<span>1</span></a></li>
 		
 			<li><a href="/tags/JanusGraph/">JanusGraph<span>1</span></a></li>
+		
+			<li><a href="/tags/hexo/">hexo<span>2</span></a></li>
+		
+			<li><a href="/tags/gitlab/">gitlab<span>2</span></a></li>
 		
 		 
 		</ul>
@@ -669,15 +669,15 @@ var _hmt = _hmt || [];
 		
 			
 <div class="widget">
-  <h4>Recent Posts</h4>
+  <h4>最新文章</h4>
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2018/03/03/JanusGraph的介绍-优势/" ><i class="fa fa-file-o"></i>JanusGraph的介绍&amp;优势</a>
+        <a href="/2018/03/08/github-pages绑定域名/"  title="喜欢的女生🚺结婚了，对方却不是我😯" ><i class="fa fa-file-o"></i>github pages绑定域名</a>
       </li>
     
       <li>
-        <a href="/2018/03/02/github-pages绑定域名/"  title="喜欢的女生🚺结婚了，对方却不是我😯" ><i class="fa fa-file-o"></i>github pages绑定域名</a>
+        <a href="/2018/03/03/JanusGraph的介绍-优势/" ><i class="fa fa-file-o"></i>JanusGraph的介绍&amp;优势</a>
       </li>
     
       <li>
@@ -698,7 +698,7 @@ var _hmt = _hmt || [];
 		
 			
 <div class="widget">
-	<h4>Links</h4>
+	<h4>鏈接</h4>
 	<ul class="blogroll list-unstyled">
 	
 		<li><i class="fa fa-github"></i><a href="https://github.com/Goddywu" title="My Github account." target="_blank"]);">My Github</a></li>
