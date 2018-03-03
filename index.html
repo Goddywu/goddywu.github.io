@@ -133,11 +133,378 @@ var _hmt = _hmt || [];
 <div class="row">
 	<div class="col-md-8">
 		<h3 class="title">
-			<a href="/2018/03/08/github-pages绑定域名/" title="喜欢的女生🚺结婚了，对方却不是我😯">github pages绑定域名</a>
+			<a href="/2018/03/03/JanusGraph的介绍-优势/" >JanusGraph的介绍&amp;优势</a>
 		</h3>
 		</div>
 	<div class="col-md-4">
-		<div class="date">post @ 2018-03-08  </div>
+		<div class="date">post @ 2018-03-03  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>JanusGraph的设计是为了支持处理那些需要大量存储空间和强大的计算能力的图形。它的基本优点是大规模数据的实时遍历和分析查询。<br>JanusGraph支持多个非常大的图形，支持大量并发事务和运行图计算。</p>
+<ul>
+<li>它的事务处理能力兼容集群中的多台机器并可以以毫秒为单位回答了大型图表上复杂的遍历查询。</li>
+<li>它通过Hadoop的框架支持全局的图形分析和图的批量处理。</li>
+</ul>
+<blockquote>
+<p>JanusGraph是一个图数据库引擎. JanusGraph集中在图的序列化, 图的数据模型和高效的查询. 此外JanusGraph依赖hadoop来做图的统计和批量图操作. JanusGraph为数据存储,索引和客户端访问实现了粗粒度的模块接口. JanusGraph的模块架构能和和许多存储,索引,客户端技术集成. 可以简便的扩展新的功能<br><br>JanusGraph标准支持下列存储适配和索引适配, 同时也支持第三方适配<br>数据存储<br>· Apache Cassandra<br>· Apache HBase<br>· Oracle Berkeley DB Java Edition<br><br>索引, 加快查询和复杂查询<br> · Elasticsearch<br>· Apache Solr<br>· Apache Lucene<br>通常, 应用通过两种方法与JanusGraph交互<br>当从本地或者远程检索数据, 内嵌在应用中的JanusGraph,运行Gremlin查询, JanusGraph缓存和事务处理和应用在同一个JVM上,<br>通过提交Gremlin查询, 和本地或者远程的JanusGraph实例交互, JanusGraph原生支持Gremlin Server 组件(TinkerPop stack)</p>
+</blockquote>
+<h1 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h1><p><img src="http://upload-images.jianshu.io/upload_images/7691672-7f70b089c132eb71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><ol>
+<li><a href="https://github.com/JanusGraph/janusgraph/releases" target="_blank" rel="noopener">下载地址</a></li>
+<li>解压并在终端打开<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ bin/janusgraph.sh start</span><br><span class="line">$ bin/gremlin.sh</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><em>注：JanusGraph自带了一个可以开箱使用的JanusServer，里面集成了简化的cassandra和ES，不能作为生产环境，但可以用来学习使用JanusServer</em></p>
+<ol>
+<li>测试<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ graph = JanusGraphFactory.open(&apos;conf/janusgraph-cassandra-es.properties&apos;)</span><br><span class="line">$ GraphOfTheGodsFactory.load(graph)</span><br><span class="line">$ g = graph.traversal()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="https://github.com/JanusGraph/janusgraph" target="_blank" rel="noopener">github - JanusGraph</a></li>
+<li><a href="http://blog.csdn.net/landebug/article/details/78984277" target="_blank" rel="noopener">csdn - landebug的博客</a></li>
+<li><a href="http://docs.janusgraph.org/latest/" target="_blank" rel="noopener">JanusGraph官网</a></li>
+<li><a href="https://www.cnblogs.com/jiyuqi/p/320267ff0b5052fad4613945e58ea1f1.html" target="_blank" rel="noopener">cnblogs - 且听风吟的博客</a></li>
+<li><a href="http://blog.csdn.net/qq_32662595/article/details/78656108" target="_blank" rel="noopener">csdn - 瑜兮 - JanusGraph之事务处理</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2018/03/03/JanusGraph的介绍-优势/#more" class="btn btn-default more">Leia Mais</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2018/02/27/机器学习-决策树/" >机器学习(决策树)</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-02-27  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>决策树(decision tree)，也称为判定树，是一类常见的机器学习的方法。<br>一般，一棵决策树包含<code>1个根节点</code>,<code>若干内部结点</code>,<code>若干叶结点</code>。叶结点对应决策结果，其他每个结点对应一个属性测试，根结点包含样本全集。</p>
+<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>决策树学习的目的是为了产生一棵泛化能力强(处理未见示例的能力强)的决策树，基本流程遵循简单且直观的<code>分而治之(divide-and-conquer)</code>策略。</p>
+<h1 id="简单示例"><a href="#简单示例" class="headerlink" title="简单示例"></a>简单示例</h1><p><img src="http://upload-images.jianshu.io/upload_images/7691672-ff60864f68f9d36d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p>上图完整表达了这个女孩决定是否见一个约会对象的策略，其中绿色节点表示判断条件，橙色节点表示决策结果，箭头表示在一个判断条件在不同情况下的决策路径，图中红色箭头表示了上面例子中女孩的决策过程。<br> <br>这幅图基本可以算是一颗决策树，说它“基本可以算”是因为图中的判定条件没有量化，如收入高中低等等，还不能算是严格意义上的决策树，如果将所有条件量化，则就变成真正的决策树了。</p>
+</blockquote>
+<h1 id="划分选择"><a href="#划分选择" class="headerlink" title="划分选择"></a>划分选择</h1><p>决策树的生成是一个递归的过程。决策树的学习关键在于如何选择最优划分属性。随着划分过程的不断进行，我们希望决策树的分支节点包含的样本尽可能属于同一类，即结点的纯度(purity)越来越高。那么<code>度量样本集合纯度</code>的指标是什么呢？</p>
+<ul>
+<li><a href="https://zh.wikipedia.org/zh-hans/%E7%86%B5_(%E4%BF%A1%E6%81%AF%E8%AE%BA" target="_blank" rel="noopener">信息熵(information entropy)</a>)是常用的一种指标。信息熵的值越小，样本集合的纯度越高。<br><img src="http://upload-images.jianshu.io/upload_images/7691672-11aa5359d5ea6d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>1.<a href="">信息增益(information gain)</a>越大，就意味着使用属性a来划分所获得的纯度提升越大。信息增益准则对可取值数目较多的属性有所偏好。<br><em>注：信息增益 = 分类前信息熵 - 分类后信息熵</em></li>
+<li>2.<a href="">增益率(intrinsic value)</a>. C4.5决策树算法采用的。增益率对可取值数目较少的属性有所偏好，因此，C4.5决策树算法不是直接选择增益率最大的候选划分属性，而是先从候选划分属性中找出信息增益高于平均水平的属性，再从中选择增益率最高的。</li>
+<li>3.<a href="">基尼指数(Gini index)</a>. 基尼值越小，数据集的纯度越高。</li>
+</ul>
+<h1 id="剪枝处理-pruning"><a href="#剪枝处理-pruning" class="headerlink" title="剪枝处理(pruning)"></a>剪枝处理(pruning)</h1><p>剪枝是决策树学习算法对付 <strong>过拟合</strong>(决策树分支过多，把训练集的特点当作所有数据都具有的一般性质)的主要手段。</p>
+<ul>
+<li>预剪枝(prepruning)： 决策树在生成的过程中，对于每个结点在划分前进行估计，若当前结点的划分不能带来决策树泛化性能提升，则停止划分并将当前结点标记为叶结点。<ul>
+<li>优点：降低了过拟合的风险，显著减少了决策树的训练时间开销和测试时间开销</li>
+<li>缺点：可能导致欠拟合</li>
+</ul>
+</li>
+<li>后剪枝(postpruning)：先从训练集生成一棵完整的决策树，然后自底向上地对非叶结点进行考察，若将该结点对应的子树替换为叶结点能带来决策树泛化性能提升，则将该子树替换为叶结点。后剪枝决策树比预剪枝决策树保留了更多的分支。<ul>
+<li>优点：后剪枝决策树的欠拟合风险较小，泛化性能往往优于预测剪枝决策树。</li>
+<li>缺点：需要自底向上对树中的所有非叶结点进行逐一考察，训练时间开销大得多。</li>
+</ul>
+</li>
+</ul>
+<h1 id="如何判断决策树泛化性能是否提升呢？"><a href="#如何判断决策树泛化性能是否提升呢？" class="headerlink" title="如何判断决策树泛化性能是否提升呢？"></a>如何判断决策树泛化性能是否提升呢？</h1><p>  待填坑。。。</p>
+<h1 id="连续与缺失值处理"><a href="#连续与缺失值处理" class="headerlink" title="连续与缺失值处理"></a>连续与缺失值处理</h1><p><strong>1. 连续值处理</strong><br>=&gt; 连续属性离散化技术  =&gt; 二分法(bi-partition)<br><strong>2. 缺失值处理</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(1)如何在属性值缺失的情况下进行划分属性选择？</span><br><span class="line">(2)给定划分属性，若样本在该属性上的值缺失，如何对样本进行划分？</span><br></pre></td></tr></table></figure></p>
+<h1 id="多变量决策树"><a href="#多变量决策树" class="headerlink" title="多变量决策树"></a>多变量决策树</h1><p><a href="http://bealin.github.io/2017/02/27/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E2%80%945-%E5%86%B3%E7%AD%96%E6%A0%91/" target="_blank" rel="noopener">可参考BeaLin’s Blog，她摘选的机器学习原文</a></p>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
+<li><a href="http://www.cnblogs.com/leoo2sk/archive/2010/09/19/decision-tree.html" target="_blank" rel="noopener">博客园 - T2噬菌体的博客</a></li>
+<li><a href="https://zh.wikipedia.org" target="_blank" rel="noopener">维基百科</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2018/02/27/机器学习-决策树/#more" class="btn btn-default more">Leia Mais</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2018/02/26/html表格自动合并/" title="这篇文章是介绍如何在实现表格的自动合并">html表格自动合并</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-02-26  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">万恶的产品设计一个动态表格合并的功能，曾经实现了一版运用js进行dom元素的拼接，发现代码量好大，</span><br><span class="line">后来产品再次设计了类似表格，复用之前代码感觉心好累，所以我就花十分钟仔细想了下，得出下面的解决方案。</span><br><span class="line">最终效果为 https://goddywu.github.io/html/demo/table_combine.html</span><br><span class="line">源码地址 https://github.com/Goddywu/html/blob/master/demo/table_combine.html</span><br></pre></td></tr></table></figure>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>想象一个情景，我们需要记录用户的操作，并展示出来，用户在相邻时间点做的同样操作，我们希望它们占据同一个格子。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
+<li><p>如果我们希望做一个3X2的表格，第二列合并前两格，那么我们的HTML代码将是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">    &lt;td&gt;1行1列&lt;/td&gt;</span><br><span class="line">    &lt;td rowspan=&quot;2&quot;&gt;第2列前两格&lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">    &lt;td&gt;2行1列&lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">    &lt;td&gt;3行1列&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;3行2列&lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">&lt;table&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>观察需要合并的第二列，合并前我们每个行元素tr内需要有第二列的td元素，假设1代表存在，那么第二列的td存在情况为 <code>[1, 1, 1]</code></p>
+</li>
+<li>观察合并后的第二列的td元素存在情况，为 <code>[1, 0, 1]</code></li>
+<li>如果将rowspan的值代替掉第一个td元素，那么我们得到的数组为 <code>[2, 0, 1]</code>，数组名称设置为temp</li>
+<li>有了这个数组就好办了，我们可以用vue的v-on绑定rowspan，用v-if来去掉例如第二行不需要的第二个td元素。</li>
+<li><p>数据为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#已知数据</span><br><span class="line">data = [</span><br><span class="line">  [&apos;2018-01-01&apos;, &apos;买包子&apos;],</span><br><span class="line">  [&apos;2018-01-02&apos;, &apos;吃包子&apos;],</span><br><span class="line">  [&apos;2018-01-03&apos;, &apos;吃包子&apos;]</span><br><span class="line">]</span><br><span class="line">#我们需要计算出的数组</span><br><span class="line">array = [2, 0, 1]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>我们的代码将是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">  &lt;tr v-for=&apos;(i, index) in data&apos;&gt;</span><br><span class="line">    &lt;td&gt;</span><br><span class="line">      &#123;&#123;i[0]&#125;&#125;</span><br><span class="line">    &lt;/td&gt;</span><br><span class="line">    &lt;td v-if=&apos;temp[index] != 0&apos;&gt;</span><br><span class="line">      &#123;&#123;i[1]&#125;&#125;</span><br><span class="line">    &lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="接下来，就是核心：如何得出数组array"><a href="#接下来，就是核心：如何得出数组array" class="headerlink" title="接下来，就是核心：如何得出数组array"></a>接下来，就是核心：如何得出数组array</h2><blockquote>
+<p>思路：<br>建立一个temp作缓存变量，count作为计数器，遍历data数组，如果值与temp相同，则计数器加1，如果不同，则temp值赋值为当前值，并且计数器重置。<img src="http://upload-images.jianshu.io/upload_images/7691672-a1c0a070456fedd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</blockquote>
+<p>所有代码戳<a href="https://github.com/Goddywu/html/blob/master/demo/table_combine.html" target="_blank" rel="noopener">链接</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://gitlab.com/users/Goddy/projects" target="_blank" rel="noopener">我自己的gitlab账号</a></li>
+<li><a href="https://github.com/Goddywu?tab=repositories" target="_blank" rel="noopener">我自己的github账号</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2018/02/26/html表格自动合并/#more" class="btn btn-default more">Leia Mais</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2018/02/25/echarts的事件引入（一）/" title="这篇文章是介绍echarts的折线图添加入事件">echarts的事件引入（一）</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-02-25  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">序：</span><br><span class="line">公司一直在强调`结果导向`，那我就先放最终结果的链接吧。</span><br><span class="line">在线访问：https://goddy.gitlab.io/line-chart-event/#/</span><br><span class="line">源码地址：https://gitlab.com/Goddy/line-chart-event</span><br><span class="line">这个系列主要解决了折线图引入事件的需求，需要读者有一定echarts的基础。</span><br><span class="line">项目中我已经封装好了事件与折线图融合的方法，我们只需要引入js文件即可，下一个篇章我来说明下我封装的内容。</span><br><span class="line">此篇主要讲解虚拟的业务情景以及在vue项目中如何使用封装的js文件。</span><br></pre></td></tr></table></figure>
+<h2 id="假设情景"><a href="#假设情景" class="headerlink" title="假设情景"></a>假设情景</h2><p>对比南通和石家庄分别两个区的降雨量，并将一些降雨量导致的事件体现到折线图上，点击事件可以跳到相应新闻网站。</p>
+<h2 id="已知数据"><a href="#已知数据" class="headerlink" title="已知数据"></a>已知数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#时间</span><br><span class="line">[&apos;2017-12-21&apos;, &apos;2017-12-22&apos;, &apos;2017-12-23&apos;, &apos;2017-12-24&apos;, &apos;2017-12-25&apos;, &apos;2017-12-26&apos;, &apos;2017-12-27&apos;, &apos;2017-12-28&apos;, &apos;2017-12-29&apos;, &apos;2017-12-30&apos;, &apos;2017-12-31&apos;, &apos;2018-01-01&apos;, &apos;2018-01-02&apos;, &apos;2018-01-03&apos;, &apos;2018-01-04&apos;, &apos;2018-01-05&apos;, &apos;2018-01-06&apos;, &apos;2018-01-07&apos;]</span><br><span class="line">#南通A、B地区降雨量</span><br><span class="line">[1,2,3,4,5,6,7,5,3,9,12,4,2,4,6,3]</span><br><span class="line">[7,6,5,4,3,2,1,8,2,14,3,2,14,5,20]</span><br><span class="line">#石家庄A、B地区降雨量（单引号为未知）</span><br><span class="line">[1,2,3,4,5,6,7,7,2,2,4,6,7,3,2,1]</span><br><span class="line">[7,6,5,&apos;&apos;,4,3,2,1,4,8,8,2,3,2]</span><br><span class="line">#南通事件（单个例子）</span><br><span class="line">&#123;</span><br><span class="line">   title: &apos;事件(2)&apos;,  #标题</span><br><span class="line">   date: &apos;2017-12-26&apos;,  #日期</span><br><span class="line">   content: &apos;内容(1226)&apos;,  #内容</span><br><span class="line">   url: &apos;http://echarts.baidu.com/demo.html#grid-multiple&apos;  #事件网址</span><br><span class="line">&#125;</span><br><span class="line">#石家庄事件（同上）</span><br></pre></td></tr></table></figure>
+<h2 id="核心思路"><a href="#核心思路" class="headerlink" title="核心思路"></a>核心思路</h2><p>因为x轴数据即时间是连续不间断的，那么我们就可以根据x轴的两端的时间及它们的位置找到事件发生的时间对应x轴的位置。</p>
+<h2 id="引入流程"><a href="#引入流程" class="headerlink" title="引入流程"></a>引入流程</h2><p><strong>1. 创建vue项目</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ vue init webpack my-project</span><br><span class="line">$ cd my-project</span><br><span class="line">$ cnpm install</span><br><span class="line">$ npm run dev</span><br><span class="line">$ cnpm install echarts --save</span><br></pre></td></tr></table></figure></p>
+<p><strong>2. 引入封装的js文件</strong></p>
+<ul>
+<li><a href="https://gitlab.com/Goddy/line-chart-event/blob/master/src/assets/js/echartsEvent.js" target="_blank" rel="noopener">下载需要引入的echartsEvent.js文档</a></li>
+<li>用一款你熟悉的编译器打开my-project</li>
+<li>打开目录 <code>src/components/HelloWorld.vue</code></li>
+<li>添加一个div<ul>
+<li>🆔设置为<code>echarts</code>，用于识别</li>
+<li>给此div添加css <code>#echarts {width: 1000px;margin:20px auto;}</code></li>
+</ul>
+</li>
+<li>从js文件引入drawChart方法 <code>import {drawChart} from &#39;@/assets/js/echartsEvent&#39;</code></li>
+<li>重点来了，数据配置<ul>
+<li>数据概览<img src="http://upload-images.jianshu.io/upload_images/7691672-5ef469d2b47914fc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>折线图数据<img src="http://upload-images.jianshu.io/upload_images/7691672-f80c7d62b89c3676.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>事件数据 （不做展示，可戳<a href="https://gitlab.com/Goddy/line-chart-event/blob/master/src/components/HelloWorld.vue" target="_blank" rel="noopener">链接</a>查看）</li>
+</ul>
+</li>
+<li>添加drawChart的触发方法（编译好HTML后触发）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mounted() &#123;</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    drawChart(this.dataInput)</span><br><span class="line">  &#125;, 300)  #延迟触发</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，你本地的样例生效了吗？</p>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
+<li><a href="http://echarts.baidu.com/" target="_blank" rel="noopener">百度echarts官方文档</a></li>
+<li><a href="https://cn.vuejs.org/index.html" target="_blank" rel="noopener">vue官方文档</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2018/02/25/echarts的事件引入（一）/#more" class="btn btn-default more">Leia Mais</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2018/02/24/使用github子目录部署hexo个人博客/" >使用github子目录部署hexo个人博客</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-02-24  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">序：</span><br><span class="line">作为一个孤家寡人，自称孤和寡人不为过吧。🙄</span><br><span class="line">寡人，在网上浏览了很多关于如何在github部署hexo的文章，</span><br><span class="line">但是都是在github为我们分配的二级域名根目录下，例如https://goddywu.github.io/</span><br><span class="line">如果我想blog子目录下部署呢（https://goddywu.github.io/blog/）</span><br><span class="line">读完这篇文章相信您就会了解。</span><br></pre></td></tr></table></figure>
+<h2 id="一、安装环境"><a href="#一、安装环境" class="headerlink" title="一、安装环境"></a>一、安装环境</h2><p><strong>1. nodejs</strong><br>安装：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">官网下载页</a><br>验证：$ node -v,   $ npm -v 查看node及npm的版本<br><strong>2. git</strong><br>安装：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网下载页</a><br>验证：$ git –version 查看git的版本<br><strong>3. hexo-cli</strong><br>安装： $ cnpm install hexo-cli -g<br>验证：$ hexo -v 检查hexo的版本</p>
+<h2 id="二、hexo-cli脚手架的使用"><a href="#二、hexo-cli脚手架的使用" class="headerlink" title="二、hexo-cli脚手架的使用"></a>二、hexo-cli脚手架的使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ cd test  #打开存放项目的目录</span><br><span class="line">$ hexo init my-blog  #下载模版项目</span><br><span class="line">$ cd my-blog  #打开模板项目目录</span><br><span class="line">$ cnpm install  #下载相关依赖的包</span><br><span class="line">$ cnpm install hexo-deployer-git --save  #安装扩展包</span><br><span class="line">$ hexo generate / hexo g  #生成静态文件</span><br><span class="line">$ hexo server / hexo s  [-i 127.0.0.1] [-p 4000]#默认在本地的4000端口启动项目</span><br><span class="line">control + C  #终止运行</span><br><span class="line">$ hexo deploy / hexo d  #将.deploy目录部署 [到Github]</span><br><span class="line">$ hexo g -d / hexo d -g  #生成完毕后自动部署</span><br></pre></td></tr></table></figure>
+<h2 id="三、操作步骤"><a href="#三、操作步骤" class="headerlink" title="三、操作步骤"></a>三、操作步骤</h2><h4 id="1-github操作"><a href="#1-github操作" class="headerlink" title="1. github操作"></a>1. github操作</h4><ul>
+<li>github新建项目，名称为blog</li>
+<li>修改已创建好的hexo项目中的_config.yml文件<img src="http://upload-images.jianshu.io/upload_images/7691672-10c91cc7e9e1f42c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><img src="http://upload-images.jianshu.io/upload_images/7691672-6de8aa1b0c8c5989.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>终端执行 $ hexo g -d</li>
+<li>打开github我们的项目地址</li>
+<li>选择setting</li>
+<li>找到GitHub Pages勾选master branch</li>
+</ul>
+<p>至此，博客就可以访问了，示例网址：<br>  <a href="https://goddywu.github.io/blog/">https://goddywu.github.io/blog/</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="http://nodejs.cn/" target="_blank" rel="noopener">node官网</a></li>
+<li><a href="http://www.runoob.com/nodejs/nodejs-tutorial.html" target="_blank" rel="noopener">菜鸟教程node趴</a></li>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">git官方网址</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的官方网站</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官网</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2018/02/24/使用github子目录部署hexo个人博客/#more" class="btn btn-default more">Leia Mais</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2018/02/24/使用gitlab部署hexo/" >使用gitlab部署hexo</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-02-24  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">因为喜欢gitlab，希望通过gitlab pages部署hexo。</span><br><span class="line">我们一般在本地打包好本地文件再放置到github远程仓库上，</span><br><span class="line">然而gitlab部署博客，需要在服务器端完成生成和部署。</span><br></pre></td></tr></table></figure>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
+<li>git</li>
+<li>hexo</li>
+</ul>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><ol>
+<li>在gitlab新建项目blog</li>
+<li><p>本地新建hexo项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cd test  #打开存放项目的目录</span><br><span class="line">$ hexo init my-blog  #下载模版项目</span><br><span class="line">$ cd my-blog  #打开模板项目目录</span><br><span class="line">$ cnpm install  #下载相关依赖的包</span><br><span class="line">$ cnpm install hexo-deployer-git --save  #安装扩展包</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将本地项目添加至远程仓库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ cd my-blog  #打开项目目录</span><br><span class="line">$ git init  #设置项目目录为git仓库</span><br><span class="line">$ git remote add origin git@gitlab.com:Goddy/blog.git  #连接远程仓库</span><br><span class="line">$ git add .  #添加文件</span><br><span class="line">$ git commit -m &apos;msg&apos;  #添加注释并合并至本地git仓库</span><br><span class="line">$ git push  #提交至远程仓库</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加.gitlab-ci.yml部署文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">image: node:4.2.2</span><br><span class="line"></span><br><span class="line">pages:</span><br><span class="line">  cache:</span><br><span class="line">    paths:</span><br><span class="line">    - node_modules/</span><br><span class="line"></span><br><span class="line">  script:</span><br><span class="line">  - npm install hexo-cli -g</span><br><span class="line">  - npm install</span><br><span class="line">  - hexo deploy</span><br><span class="line">  artifacts:</span><br><span class="line">    paths:</span><br><span class="line">    - public</span><br><span class="line">  only:</span><br><span class="line">  - master</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><em>注：gitlab-ci全称是gitlab continuous integration的意思，就是持续集成。每次在我们push到gitlab的时候，都会触发此脚本</em></p>
+<ol>
+<li>修改项目里_config.yml文件</li>
+</ol>
+<ul>
+<li>url设置为：<a href="https://goddy.gitlab.io/blog" target="_blank" rel="noopener">https://goddy.gitlab.io/blog</a></li>
+<li>root设置为：/blog/</li>
+</ul>
+<ol>
+<li>再次提交后查看setting里pages，已可以访问网址：<a href="https://goddy.gitlab.io/blog/" target="_blank" rel="noopener">https://goddy.gitlab.io/blog/</a><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2></li>
+</ol>
+<ul>
+<li><a href="http://blog.csdn.net/winter_evening/article/details/72353953" target="_blank" rel="noopener">CSDN Al’boy的博客</a></li>
+<li><a href="https://gitlab.com/pages/hexo" target="_blank" rel="noopener">gitlab搭载hexo的开源项目</a></li>
+</ul>
+
+	
+	</div>
+  <a type="button" href="/2018/02/24/使用gitlab部署hexo/#more" class="btn btn-default more">Leia Mais</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2018/02/24/gitlab部署vue项目/" title="这篇文章是介绍如何在gitlab上部署vue项目">gitlab部署vue项目</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-02-24  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">序：</span><br><span class="line">gitlab方便之处在于它可以帮你在服务器端进行软件的打包、发布，</span><br><span class="line">我们无需在本地进行代码的压缩。</span><br><span class="line">vue-ci脚手架生产的模版，如果想使用github pages，</span><br><span class="line">我们需要在本地执行npm run build，将dist文件夹下的内容提交到远程仓库。</span><br><span class="line">然而，gitlab就没有这个必要了。</span><br><span class="line">示例网址：https://goddy.gitlab.io/vue-gitlab</span><br></pre></td></tr></table></figure>
+<h3 id="1-本地使用vue-ci创建好模版项目"><a href="#1-本地使用vue-ci创建好模版项目" class="headerlink" title="1.本地使用vue-ci创建好模版项目"></a>1.本地使用vue-ci创建好模版项目</h3><ul>
+<li><a href="https://cn.vuejs.org/v2/guide/installation.html" target="_blank" rel="noopener">官网教程</a><h3 id="2-在项目根目录新建-gitlab-ci-yml"><a href="#2-在项目根目录新建-gitlab-ci-yml" class="headerlink" title="2.在项目根目录新建.gitlab-ci.yml"></a>2.在项目根目录新建.gitlab-ci.yml</h3></li>
+<li>$ touch .gitlab-ci.yml<h3 id="3-在-gitlab-ci-yml添加打包、部署的流程"><a href="#3-在-gitlab-ci-yml添加打包、部署的流程" class="headerlink" title="3.在.gitlab-ci.yml添加打包、部署的流程"></a>3.在.gitlab-ci.yml添加打包、部署的流程</h3></li>
+<li><p>方法1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#build过程</span><br><span class="line">build:</span><br><span class="line">  stage: build</span><br><span class="line">  image: node:9.4.0</span><br><span class="line">  cache:</span><br><span class="line">    paths:</span><br><span class="line">    - node_modules/</span><br><span class="line">  script:</span><br><span class="line">  - npm install</span><br><span class="line">  - npm run build</span><br><span class="line">  artifacts:</span><br><span class="line">    paths:</span><br><span class="line">    - dist</span><br><span class="line">  only:</span><br><span class="line">  - master</span><br><span class="line"></span><br><span class="line">#发布过程</span><br><span class="line">pages:</span><br><span class="line">  stage: deploy</span><br><span class="line">  image: alpine:latest</span><br><span class="line">  script:</span><br><span class="line">  - mkdir public</span><br><span class="line">  - mv dist/* public</span><br><span class="line">  artifacts:</span><br><span class="line">    paths:</span><br><span class="line">    - public</span><br><span class="line">  only:</span><br><span class="line">  - master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法2:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#打包和发布一起执行</span><br><span class="line">image: node:9.4.0</span><br><span class="line"></span><br><span class="line">build:</span><br><span class="line">  cache:</span><br><span class="line">    paths:</span><br><span class="line">    - node_modules/</span><br><span class="line">  script:</span><br><span class="line">  - npm install</span><br><span class="line">  - npm run build</span><br><span class="line">  - mkdir public</span><br><span class="line">  - mv dist/* public</span><br><span class="line">  artifacts:</span><br><span class="line">    paths:</span><br><span class="line">    - public</span><br><span class="line">  only:</span><br><span class="line">  - master</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><em>p.s.   值得注意的一点是，vue-ci创建的模版有一个缺陷，在config/idex.js文件里，module.exports的build模块中的assetsPublicPath应设置为相对路径’./‘。否则打包后的css及js可能找不到对应路径</em></p>
+
+	
+	</div>
+  <a type="button" href="/2018/02/24/gitlab部署vue项目/#more" class="btn btn-default more">Leia Mais</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2018/01/01/github-pages绑定域名/" title="喜欢的女生🚺结婚了，对方却不是我😯">github pages绑定域名</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-01-01  </div>
 		</div>
 	</div>
 	
@@ -218,374 +585,7 @@ var _hmt = _hmt || [];
 
 	
 	</div>
-  <a type="button" href="/2018/03/08/github-pages绑定域名/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/03/03/JanusGraph的介绍-优势/" >JanusGraph的介绍&amp;优势</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-03-03  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>JanusGraph的设计是为了支持处理那些需要大量存储空间和强大的计算能力的图形。它的基本优点是大规模数据的实时遍历和分析查询。<br>JanusGraph支持多个非常大的图形，支持大量并发事务和运行图计算。</p>
-<ul>
-<li>它的事务处理能力兼容集群中的多台机器并可以以毫秒为单位回答了大型图表上复杂的遍历查询。</li>
-<li>它通过Hadoop的框架支持全局的图形分析和图的批量处理。</li>
-</ul>
-<blockquote>
-<p>JanusGraph是一个图数据库引擎. JanusGraph集中在图的序列化, 图的数据模型和高效的查询. 此外JanusGraph依赖hadoop来做图的统计和批量图操作. JanusGraph为数据存储,索引和客户端访问实现了粗粒度的模块接口. JanusGraph的模块架构能和和许多存储,索引,客户端技术集成. 可以简便的扩展新的功能<br><br>JanusGraph标准支持下列存储适配和索引适配, 同时也支持第三方适配<br>数据存储<br>· Apache Cassandra<br>· Apache HBase<br>· Oracle Berkeley DB Java Edition<br><br>索引, 加快查询和复杂查询<br> · Elasticsearch<br>· Apache Solr<br>· Apache Lucene<br>通常, 应用通过两种方法与JanusGraph交互<br>当从本地或者远程检索数据, 内嵌在应用中的JanusGraph,运行Gremlin查询, JanusGraph缓存和事务处理和应用在同一个JVM上,<br>通过提交Gremlin查询, 和本地或者远程的JanusGraph实例交互, JanusGraph原生支持Gremlin Server 组件(TinkerPop stack)</p>
-</blockquote>
-<h1 id="架构图"><a href="#架构图" class="headerlink" title="架构图"></a>架构图</h1><p><img src="http://upload-images.jianshu.io/upload_images/7691672-7f70b089c132eb71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h1 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h1><ol>
-<li><a href="https://github.com/JanusGraph/janusgraph/releases" target="_blank" rel="noopener">下载地址</a></li>
-<li>解压并在终端打开<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ bin/janusgraph.sh start</span><br><span class="line">$ bin/gremlin.sh</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><em>注：JanusGraph自带了一个可以开箱使用的JanusServer，里面集成了简化的cassandra和ES，不能作为生产环境，但可以用来学习使用JanusServer</em></p>
-<ol>
-<li>测试<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ graph = JanusGraphFactory.open(&apos;conf/janusgraph-cassandra-es.properties&apos;)</span><br><span class="line">$ GraphOfTheGodsFactory.load(graph)</span><br><span class="line">$ g = graph.traversal()</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
-<li><a href="https://github.com/JanusGraph/janusgraph" target="_blank" rel="noopener">github - JanusGraph</a></li>
-<li><a href="http://blog.csdn.net/landebug/article/details/78984277" target="_blank" rel="noopener">csdn - landebug的博客</a></li>
-<li><a href="http://docs.janusgraph.org/latest/" target="_blank" rel="noopener">JanusGraph官网</a></li>
-<li><a href="https://www.cnblogs.com/jiyuqi/p/320267ff0b5052fad4613945e58ea1f1.html" target="_blank" rel="noopener">cnblogs - 且听风吟的博客</a></li>
-<li><a href="http://blog.csdn.net/qq_32662595/article/details/78656108" target="_blank" rel="noopener">csdn - 瑜兮 - JanusGraph之事务处理</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2018/03/03/JanusGraph的介绍-优势/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/02/27/机器学习-决策树/" >机器学习(决策树)</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-02-27  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>决策树(decision tree)，也称为判定树，是一类常见的机器学习的方法。<br>一般，一棵决策树包含<code>1个根节点</code>,<code>若干内部结点</code>,<code>若干叶结点</code>。叶结点对应决策结果，其他每个结点对应一个属性测试，根结点包含样本全集。</p>
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>决策树学习的目的是为了产生一棵泛化能力强(处理未见示例的能力强)的决策树，基本流程遵循简单且直观的<code>分而治之(divide-and-conquer)</code>策略。</p>
-<h1 id="简单示例"><a href="#简单示例" class="headerlink" title="简单示例"></a>简单示例</h1><p><img src="http://upload-images.jianshu.io/upload_images/7691672-ff60864f68f9d36d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<blockquote>
-<p>上图完整表达了这个女孩决定是否见一个约会对象的策略，其中绿色节点表示判断条件，橙色节点表示决策结果，箭头表示在一个判断条件在不同情况下的决策路径，图中红色箭头表示了上面例子中女孩的决策过程。<br> <br>这幅图基本可以算是一颗决策树，说它“基本可以算”是因为图中的判定条件没有量化，如收入高中低等等，还不能算是严格意义上的决策树，如果将所有条件量化，则就变成真正的决策树了。</p>
-</blockquote>
-<h1 id="划分选择"><a href="#划分选择" class="headerlink" title="划分选择"></a>划分选择</h1><p>决策树的生成是一个递归的过程。决策树的学习关键在于如何选择最优划分属性。随着划分过程的不断进行，我们希望决策树的分支节点包含的样本尽可能属于同一类，即结点的纯度(purity)越来越高。那么<code>度量样本集合纯度</code>的指标是什么呢？</p>
-<ul>
-<li><a href="https://zh.wikipedia.org/zh-hans/%E7%86%B5_(%E4%BF%A1%E6%81%AF%E8%AE%BA" target="_blank" rel="noopener">信息熵(information entropy)</a>)是常用的一种指标。信息熵的值越小，样本集合的纯度越高。<br><img src="http://upload-images.jianshu.io/upload_images/7691672-11aa5359d5ea6d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>1.<a href="">信息增益(information gain)</a>越大，就意味着使用属性a来划分所获得的纯度提升越大。信息增益准则对可取值数目较多的属性有所偏好。<br><em>注：信息增益 = 分类前信息熵 - 分类后信息熵</em></li>
-<li>2.<a href="">增益率(intrinsic value)</a>. C4.5决策树算法采用的。增益率对可取值数目较少的属性有所偏好，因此，C4.5决策树算法不是直接选择增益率最大的候选划分属性，而是先从候选划分属性中找出信息增益高于平均水平的属性，再从中选择增益率最高的。</li>
-<li>3.<a href="">基尼指数(Gini index)</a>. 基尼值越小，数据集的纯度越高。</li>
-</ul>
-<h1 id="剪枝处理-pruning"><a href="#剪枝处理-pruning" class="headerlink" title="剪枝处理(pruning)"></a>剪枝处理(pruning)</h1><p>剪枝是决策树学习算法对付 <strong>过拟合</strong>(决策树分支过多，把训练集的特点当作所有数据都具有的一般性质)的主要手段。</p>
-<ul>
-<li>预剪枝(prepruning)： 决策树在生成的过程中，对于每个结点在划分前进行估计，若当前结点的划分不能带来决策树泛化性能提升，则停止划分并将当前结点标记为叶结点。<ul>
-<li>优点：降低了过拟合的风险，显著减少了决策树的训练时间开销和测试时间开销</li>
-<li>缺点：可能导致欠拟合</li>
-</ul>
-</li>
-<li>后剪枝(postpruning)：先从训练集生成一棵完整的决策树，然后自底向上地对非叶结点进行考察，若将该结点对应的子树替换为叶结点能带来决策树泛化性能提升，则将该子树替换为叶结点。后剪枝决策树比预剪枝决策树保留了更多的分支。<ul>
-<li>优点：后剪枝决策树的欠拟合风险较小，泛化性能往往优于预测剪枝决策树。</li>
-<li>缺点：需要自底向上对树中的所有非叶结点进行逐一考察，训练时间开销大得多。</li>
-</ul>
-</li>
-</ul>
-<h1 id="如何判断决策树泛化性能是否提升呢？"><a href="#如何判断决策树泛化性能是否提升呢？" class="headerlink" title="如何判断决策树泛化性能是否提升呢？"></a>如何判断决策树泛化性能是否提升呢？</h1><p>  待填坑。。。</p>
-<h1 id="连续与缺失值处理"><a href="#连续与缺失值处理" class="headerlink" title="连续与缺失值处理"></a>连续与缺失值处理</h1><p><strong>1. 连续值处理</strong><br>=&gt; 连续属性离散化技术  =&gt; 二分法(bi-partition)<br><strong>2. 缺失值处理</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(1)如何在属性值缺失的情况下进行划分属性选择？</span><br><span class="line">(2)给定划分属性，若样本在该属性上的值缺失，如何对样本进行划分？</span><br></pre></td></tr></table></figure></p>
-<h1 id="多变量决策树"><a href="#多变量决策树" class="headerlink" title="多变量决策树"></a>多变量决策树</h1><p><a href="http://bealin.github.io/2017/02/27/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E5%88%97%E2%80%945-%E5%86%B3%E7%AD%96%E6%A0%91/" target="_blank" rel="noopener">可参考BeaLin’s Blog，她摘选的机器学习原文</a></p>
-<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
-<li><a href="http://www.cnblogs.com/leoo2sk/archive/2010/09/19/decision-tree.html" target="_blank" rel="noopener">博客园 - T2噬菌体的博客</a></li>
-<li><a href="https://zh.wikipedia.org" target="_blank" rel="noopener">维基百科</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2018/02/27/机器学习-决策树/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/02/26/html表格自动合并/" title="这篇文章是介绍如何在实现表格的自动合并">html表格自动合并</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-02-26  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">万恶的产品设计一个动态表格合并的功能，曾经实现了一版运用js进行dom元素的拼接，发现代码量好大，</span><br><span class="line">后来产品再次设计了类似表格，复用之前代码感觉心好累，所以我就花十分钟仔细想了下，得出下面的解决方案。</span><br><span class="line">最终效果为 https://goddywu.github.io/html/demo/table_combine.html</span><br><span class="line">源码地址 https://github.com/Goddywu/html/blob/master/demo/table_combine.html</span><br></pre></td></tr></table></figure>
-<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>想象一个情景，我们需要记录用户的操作，并展示出来，用户在相邻时间点做的同样操作，我们希望它们占据同一个格子。</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
-<li><p>如果我们希望做一个3X2的表格，第二列合并前两格，那么我们的HTML代码将是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">    &lt;td&gt;1行1列&lt;/td&gt;</span><br><span class="line">    &lt;td rowspan=&quot;2&quot;&gt;第2列前两格&lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">    &lt;td&gt;2行1列&lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">    &lt;td&gt;3行1列&lt;/td&gt;</span><br><span class="line">    &lt;td&gt;3行2列&lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">&lt;table&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>观察需要合并的第二列，合并前我们每个行元素tr内需要有第二列的td元素，假设1代表存在，那么第二列的td存在情况为 <code>[1, 1, 1]</code></p>
-</li>
-<li>观察合并后的第二列的td元素存在情况，为 <code>[1, 0, 1]</code></li>
-<li>如果将rowspan的值代替掉第一个td元素，那么我们得到的数组为 <code>[2, 0, 1]</code>，数组名称设置为temp</li>
-<li>有了这个数组就好办了，我们可以用vue的v-on绑定rowspan，用v-if来去掉例如第二行不需要的第二个td元素。</li>
-<li><p>数据为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#已知数据</span><br><span class="line">data = [</span><br><span class="line">  [&apos;2018-01-01&apos;, &apos;买包子&apos;],</span><br><span class="line">  [&apos;2018-01-02&apos;, &apos;吃包子&apos;],</span><br><span class="line">  [&apos;2018-01-03&apos;, &apos;吃包子&apos;]</span><br><span class="line">]</span><br><span class="line">#我们需要计算出的数组</span><br><span class="line">array = [2, 0, 1]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>我们的代码将是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">  &lt;tr v-for=&apos;(i, index) in data&apos;&gt;</span><br><span class="line">    &lt;td&gt;</span><br><span class="line">      &#123;&#123;i[0]&#125;&#125;</span><br><span class="line">    &lt;/td&gt;</span><br><span class="line">    &lt;td v-if=&apos;temp[index] != 0&apos;&gt;</span><br><span class="line">      &#123;&#123;i[1]&#125;&#125;</span><br><span class="line">    &lt;/td&gt;</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="接下来，就是核心：如何得出数组array"><a href="#接下来，就是核心：如何得出数组array" class="headerlink" title="接下来，就是核心：如何得出数组array"></a>接下来，就是核心：如何得出数组array</h2><blockquote>
-<p>思路：<br>建立一个temp作缓存变量，count作为计数器，遍历data数组，如果值与temp相同，则计数器加1，如果不同，则temp值赋值为当前值，并且计数器重置。<img src="http://upload-images.jianshu.io/upload_images/7691672-a1c0a070456fedd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-</blockquote>
-<p>所有代码戳<a href="https://github.com/Goddywu/html/blob/master/demo/table_combine.html" target="_blank" rel="noopener">链接</a></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://gitlab.com/users/Goddy/projects" target="_blank" rel="noopener">我自己的gitlab账号</a></li>
-<li><a href="https://github.com/Goddywu?tab=repositories" target="_blank" rel="noopener">我自己的github账号</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2018/02/26/html表格自动合并/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/02/25/echarts的事件引入（一）/" title="这篇文章是介绍echarts的折线图添加入事件">echarts的事件引入（一）</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-02-25  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">序：</span><br><span class="line">公司一直在强调`结果导向`，那我就先放最终结果的链接吧。</span><br><span class="line">在线访问：https://goddy.gitlab.io/line-chart-event/#/</span><br><span class="line">源码地址：https://gitlab.com/Goddy/line-chart-event</span><br><span class="line">这个系列主要解决了折线图引入事件的需求，需要读者有一定echarts的基础。</span><br><span class="line">项目中我已经封装好了事件与折线图融合的方法，我们只需要引入js文件即可，下一个篇章我来说明下我封装的内容。</span><br><span class="line">此篇主要讲解虚拟的业务情景以及在vue项目中如何使用封装的js文件。</span><br></pre></td></tr></table></figure>
-<h2 id="假设情景"><a href="#假设情景" class="headerlink" title="假设情景"></a>假设情景</h2><p>对比南通和石家庄分别两个区的降雨量，并将一些降雨量导致的事件体现到折线图上，点击事件可以跳到相应新闻网站。</p>
-<h2 id="已知数据"><a href="#已知数据" class="headerlink" title="已知数据"></a>已知数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#时间</span><br><span class="line">[&apos;2017-12-21&apos;, &apos;2017-12-22&apos;, &apos;2017-12-23&apos;, &apos;2017-12-24&apos;, &apos;2017-12-25&apos;, &apos;2017-12-26&apos;, &apos;2017-12-27&apos;, &apos;2017-12-28&apos;, &apos;2017-12-29&apos;, &apos;2017-12-30&apos;, &apos;2017-12-31&apos;, &apos;2018-01-01&apos;, &apos;2018-01-02&apos;, &apos;2018-01-03&apos;, &apos;2018-01-04&apos;, &apos;2018-01-05&apos;, &apos;2018-01-06&apos;, &apos;2018-01-07&apos;]</span><br><span class="line">#南通A、B地区降雨量</span><br><span class="line">[1,2,3,4,5,6,7,5,3,9,12,4,2,4,6,3]</span><br><span class="line">[7,6,5,4,3,2,1,8,2,14,3,2,14,5,20]</span><br><span class="line">#石家庄A、B地区降雨量（单引号为未知）</span><br><span class="line">[1,2,3,4,5,6,7,7,2,2,4,6,7,3,2,1]</span><br><span class="line">[7,6,5,&apos;&apos;,4,3,2,1,4,8,8,2,3,2]</span><br><span class="line">#南通事件（单个例子）</span><br><span class="line">&#123;</span><br><span class="line">   title: &apos;事件(2)&apos;,  #标题</span><br><span class="line">   date: &apos;2017-12-26&apos;,  #日期</span><br><span class="line">   content: &apos;内容(1226)&apos;,  #内容</span><br><span class="line">   url: &apos;http://echarts.baidu.com/demo.html#grid-multiple&apos;  #事件网址</span><br><span class="line">&#125;</span><br><span class="line">#石家庄事件（同上）</span><br></pre></td></tr></table></figure>
-<h2 id="核心思路"><a href="#核心思路" class="headerlink" title="核心思路"></a>核心思路</h2><p>因为x轴数据即时间是连续不间断的，那么我们就可以根据x轴的两端的时间及它们的位置找到事件发生的时间对应x轴的位置。</p>
-<h2 id="引入流程"><a href="#引入流程" class="headerlink" title="引入流程"></a>引入流程</h2><p><strong>1. 创建vue项目</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ vue init webpack my-project</span><br><span class="line">$ cd my-project</span><br><span class="line">$ cnpm install</span><br><span class="line">$ npm run dev</span><br><span class="line">$ cnpm install echarts --save</span><br></pre></td></tr></table></figure></p>
-<p><strong>2. 引入封装的js文件</strong></p>
-<ul>
-<li><a href="https://gitlab.com/Goddy/line-chart-event/blob/master/src/assets/js/echartsEvent.js" target="_blank" rel="noopener">下载需要引入的echartsEvent.js文档</a></li>
-<li>用一款你熟悉的编译器打开my-project</li>
-<li>打开目录 <code>src/components/HelloWorld.vue</code></li>
-<li>添加一个div<ul>
-<li>🆔设置为<code>echarts</code>，用于识别</li>
-<li>给此div添加css <code>#echarts {width: 1000px;margin:20px auto;}</code></li>
-</ul>
-</li>
-<li>从js文件引入drawChart方法 <code>import {drawChart} from &#39;@/assets/js/echartsEvent&#39;</code></li>
-<li>重点来了，数据配置<ul>
-<li>数据概览<img src="http://upload-images.jianshu.io/upload_images/7691672-5ef469d2b47914fc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>折线图数据<img src="http://upload-images.jianshu.io/upload_images/7691672-f80c7d62b89c3676.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>事件数据 （不做展示，可戳<a href="https://gitlab.com/Goddy/line-chart-event/blob/master/src/components/HelloWorld.vue" target="_blank" rel="noopener">链接</a>查看）</li>
-</ul>
-</li>
-<li>添加drawChart的触发方法（编译好HTML后触发）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mounted() &#123;</span><br><span class="line">  setTimeout(() =&gt; &#123;</span><br><span class="line">    drawChart(this.dataInput)</span><br><span class="line">  &#125;, 300)  #延迟触发</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，你本地的样例生效了吗？</p>
-<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
-<li><a href="http://echarts.baidu.com/" target="_blank" rel="noopener">百度echarts官方文档</a></li>
-<li><a href="https://cn.vuejs.org/index.html" target="_blank" rel="noopener">vue官方文档</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2018/02/25/echarts的事件引入（一）/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/02/24/使用github子目录部署hexo个人博客/" >使用github子目录部署hexo个人博客</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-02-24  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">序：</span><br><span class="line">作为一个孤家寡人，自称孤和寡人不为过吧。🙄</span><br><span class="line">寡人，在网上浏览了很多关于如何在github部署hexo的文章，</span><br><span class="line">但是都是在github为我们分配的二级域名根目录下，例如https://goddywu.github.io/</span><br><span class="line">如果我想blog子目录下部署呢（https://goddywu.github.io/blog/）</span><br><span class="line">读完这篇文章相信您就会了解。</span><br></pre></td></tr></table></figure>
-<h2 id="一、安装环境"><a href="#一、安装环境" class="headerlink" title="一、安装环境"></a>一、安装环境</h2><p><strong>1. nodejs</strong><br>安装：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">官网下载页</a><br>验证：$ node -v,   $ npm -v 查看node及npm的版本<br><strong>2. git</strong><br>安装：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网下载页</a><br>验证：$ git –version 查看git的版本<br><strong>3. hexo-cli</strong><br>安装： $ cnpm install hexo-cli -g<br>验证：$ hexo -v 检查hexo的版本</p>
-<h2 id="二、hexo-cli脚手架的使用"><a href="#二、hexo-cli脚手架的使用" class="headerlink" title="二、hexo-cli脚手架的使用"></a>二、hexo-cli脚手架的使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ cd test  #打开存放项目的目录</span><br><span class="line">$ hexo init my-blog  #下载模版项目</span><br><span class="line">$ cd my-blog  #打开模板项目目录</span><br><span class="line">$ cnpm install  #下载相关依赖的包</span><br><span class="line">$ cnpm install hexo-deployer-git --save  #安装扩展包</span><br><span class="line">$ hexo generate / hexo g  #生成静态文件</span><br><span class="line">$ hexo server / hexo s  [-i 127.0.0.1] [-p 4000]#默认在本地的4000端口启动项目</span><br><span class="line">control + C  #终止运行</span><br><span class="line">$ hexo deploy / hexo d  #将.deploy目录部署 [到Github]</span><br><span class="line">$ hexo g -d / hexo d -g  #生成完毕后自动部署</span><br></pre></td></tr></table></figure>
-<h2 id="三、操作步骤"><a href="#三、操作步骤" class="headerlink" title="三、操作步骤"></a>三、操作步骤</h2><h4 id="1-github操作"><a href="#1-github操作" class="headerlink" title="1. github操作"></a>1. github操作</h4><ul>
-<li>github新建项目，名称为blog</li>
-<li>修改已创建好的hexo项目中的_config.yml文件<img src="http://upload-images.jianshu.io/upload_images/7691672-10c91cc7e9e1f42c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><img src="http://upload-images.jianshu.io/upload_images/7691672-6de8aa1b0c8c5989.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
-<li>终端执行 $ hexo g -d</li>
-<li>打开github我们的项目地址</li>
-<li>选择setting</li>
-<li>找到GitHub Pages勾选master branch</li>
-</ul>
-<p>至此，博客就可以访问了，示例网址：<br>  <a href="https://goddywu.github.io/blog/">https://goddywu.github.io/blog/</a></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="http://nodejs.cn/" target="_blank" rel="noopener">node官网</a></li>
-<li><a href="http://www.runoob.com/nodejs/nodejs-tutorial.html" target="_blank" rel="noopener">菜鸟教程node趴</a></li>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">git官方网址</a></li>
-<li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的官方网站</a></li>
-<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo官网</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2018/02/24/使用github子目录部署hexo个人博客/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/02/24/使用gitlab部署hexo/" >使用gitlab部署hexo</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-02-24  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">因为喜欢gitlab，希望通过gitlab pages部署hexo。</span><br><span class="line">我们一般在本地打包好本地文件再放置到github远程仓库上，</span><br><span class="line">然而gitlab部署博客，需要在服务器端完成生成和部署。</span><br></pre></td></tr></table></figure>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
-<li>git</li>
-<li>hexo</li>
-</ul>
-<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><ol>
-<li>在gitlab新建项目blog</li>
-<li><p>本地新建hexo项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cd test  #打开存放项目的目录</span><br><span class="line">$ hexo init my-blog  #下载模版项目</span><br><span class="line">$ cd my-blog  #打开模板项目目录</span><br><span class="line">$ cnpm install  #下载相关依赖的包</span><br><span class="line">$ cnpm install hexo-deployer-git --save  #安装扩展包</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将本地项目添加至远程仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ cd my-blog  #打开项目目录</span><br><span class="line">$ git init  #设置项目目录为git仓库</span><br><span class="line">$ git remote add origin git@gitlab.com:Goddy/blog.git  #连接远程仓库</span><br><span class="line">$ git add .  #添加文件</span><br><span class="line">$ git commit -m &apos;msg&apos;  #添加注释并合并至本地git仓库</span><br><span class="line">$ git push  #提交至远程仓库</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加.gitlab-ci.yml部署文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">image: node:4.2.2</span><br><span class="line"></span><br><span class="line">pages:</span><br><span class="line">  cache:</span><br><span class="line">    paths:</span><br><span class="line">    - node_modules/</span><br><span class="line"></span><br><span class="line">  script:</span><br><span class="line">  - npm install hexo-cli -g</span><br><span class="line">  - npm install</span><br><span class="line">  - hexo deploy</span><br><span class="line">  artifacts:</span><br><span class="line">    paths:</span><br><span class="line">    - public</span><br><span class="line">  only:</span><br><span class="line">  - master</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><em>注：gitlab-ci全称是gitlab continuous integration的意思，就是持续集成。每次在我们push到gitlab的时候，都会触发此脚本</em></p>
-<ol>
-<li>修改项目里_config.yml文件</li>
-</ol>
-<ul>
-<li>url设置为：<a href="https://goddy.gitlab.io/blog" target="_blank" rel="noopener">https://goddy.gitlab.io/blog</a></li>
-<li>root设置为：/blog/</li>
-</ul>
-<ol>
-<li>再次提交后查看setting里pages，已可以访问网址：<a href="https://goddy.gitlab.io/blog/" target="_blank" rel="noopener">https://goddy.gitlab.io/blog/</a><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2></li>
-</ol>
-<ul>
-<li><a href="http://blog.csdn.net/winter_evening/article/details/72353953" target="_blank" rel="noopener">CSDN Al’boy的博客</a></li>
-<li><a href="https://gitlab.com/pages/hexo" target="_blank" rel="noopener">gitlab搭载hexo的开源项目</a></li>
-</ul>
-
-	
-	</div>
-  <a type="button" href="/2018/02/24/使用gitlab部署hexo/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/02/24/gitlab部署vue项目/" title="这篇文章是介绍如何在gitlab上部署vue项目">gitlab部署vue项目</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-02-24  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">序：</span><br><span class="line">gitlab方便之处在于它可以帮你在服务器端进行软件的打包、发布，</span><br><span class="line">我们无需在本地进行代码的压缩。</span><br><span class="line">vue-ci脚手架生产的模版，如果想使用github pages，</span><br><span class="line">我们需要在本地执行npm run build，将dist文件夹下的内容提交到远程仓库。</span><br><span class="line">然而，gitlab就没有这个必要了。</span><br><span class="line">示例网址：https://goddy.gitlab.io/vue-gitlab</span><br></pre></td></tr></table></figure>
-<h3 id="1-本地使用vue-ci创建好模版项目"><a href="#1-本地使用vue-ci创建好模版项目" class="headerlink" title="1.本地使用vue-ci创建好模版项目"></a>1.本地使用vue-ci创建好模版项目</h3><ul>
-<li><a href="https://cn.vuejs.org/v2/guide/installation.html" target="_blank" rel="noopener">官网教程</a><h3 id="2-在项目根目录新建-gitlab-ci-yml"><a href="#2-在项目根目录新建-gitlab-ci-yml" class="headerlink" title="2.在项目根目录新建.gitlab-ci.yml"></a>2.在项目根目录新建.gitlab-ci.yml</h3></li>
-<li>$ touch .gitlab-ci.yml<h3 id="3-在-gitlab-ci-yml添加打包、部署的流程"><a href="#3-在-gitlab-ci-yml添加打包、部署的流程" class="headerlink" title="3.在.gitlab-ci.yml添加打包、部署的流程"></a>3.在.gitlab-ci.yml添加打包、部署的流程</h3></li>
-<li><p>方法1:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#build过程</span><br><span class="line">build:</span><br><span class="line">  stage: build</span><br><span class="line">  image: node:9.4.0</span><br><span class="line">  cache:</span><br><span class="line">    paths:</span><br><span class="line">    - node_modules/</span><br><span class="line">  script:</span><br><span class="line">  - npm install</span><br><span class="line">  - npm run build</span><br><span class="line">  artifacts:</span><br><span class="line">    paths:</span><br><span class="line">    - dist</span><br><span class="line">  only:</span><br><span class="line">  - master</span><br><span class="line"></span><br><span class="line">#发布过程</span><br><span class="line">pages:</span><br><span class="line">  stage: deploy</span><br><span class="line">  image: alpine:latest</span><br><span class="line">  script:</span><br><span class="line">  - mkdir public</span><br><span class="line">  - mv dist/* public</span><br><span class="line">  artifacts:</span><br><span class="line">    paths:</span><br><span class="line">    - public</span><br><span class="line">  only:</span><br><span class="line">  - master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法2:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#打包和发布一起执行</span><br><span class="line">image: node:9.4.0</span><br><span class="line"></span><br><span class="line">build:</span><br><span class="line">  cache:</span><br><span class="line">    paths:</span><br><span class="line">    - node_modules/</span><br><span class="line">  script:</span><br><span class="line">  - npm install</span><br><span class="line">  - npm run build</span><br><span class="line">  - mkdir public</span><br><span class="line">  - mv dist/* public</span><br><span class="line">  artifacts:</span><br><span class="line">    paths:</span><br><span class="line">    - public</span><br><span class="line">  only:</span><br><span class="line">  - master</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><em>p.s.   值得注意的一点是，vue-ci创建的模版有一个缺陷，在config/idex.js文件里，module.exports的build模块中的assetsPublicPath应设置为相对路径’./‘。否则打包后的css及js可能找不到对应路径</em></p>
-
-	
-	</div>
-  <a type="button" href="/2018/02/24/gitlab部署vue项目/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2018/01/01/github-pages绑定域名/#more" class="btn btn-default more">Leia Mais</a>
 </div>
 
 		
@@ -614,7 +614,7 @@ var _hmt = _hmt || [];
 			
   <div id="site_search">
    <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Busca" class="st-search-input st-default-search-input form-control"/>
    </div>  
   <div id="local-search-result"></div>
   </div>
@@ -623,7 +623,7 @@ var _hmt = _hmt || [];
 		
 			
 	<div class="widget">
-		<h4>Categories</h4>
+		<h4>Categorias</h4>
 		<ul class="tag_box inline list-unstyled">
 		
 			<li><a href="/categories/database/">database<span>1</span></a></li>
@@ -645,21 +645,21 @@ var _hmt = _hmt || [];
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/vue/">vue<span>1</span></a></li>
-		
-			<li><a href="/tags/JanusGraph/">JanusGraph<span>1</span></a></li>
-		
 			<li><a href="/tags/gitlab/">gitlab<span>2</span></a></li>
 		
+			<li><a href="/tags/html/">html<span>1</span></a></li>
+		
+			<li><a href="/tags/vue/">vue<span>1</span></a></li>
+		
 			<li><a href="/tags/event/">event<span>1</span></a></li>
+		
+			<li><a href="/tags/github/">github<span>2</span></a></li>
 		
 			<li><a href="/tags/echarts/">echarts<span>1</span></a></li>
 		
 			<li><a href="/tags/hexo/">hexo<span>2</span></a></li>
 		
-			<li><a href="/tags/html/">html<span>1</span></a></li>
-		
-			<li><a href="/tags/github/">github<span>2</span></a></li>
+			<li><a href="/tags/JanusGraph/">JanusGraph<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -669,12 +669,8 @@ var _hmt = _hmt || [];
 		
 			
 <div class="widget">
-  <h4>Recent Posts</h4>
+  <h4>Posts recentes</h4>
   <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2018/03/08/github-pages绑定域名/"  title="喜欢的女生🚺结婚了，对方却不是我😯" ><i class="fa fa-file-o"></i>github pages绑定域名</a>
-      </li>
     
       <li>
         <a href="/2018/03/03/JanusGraph的介绍-优势/" ><i class="fa fa-file-o"></i>JanusGraph的介绍&amp;优势</a>
@@ -690,6 +686,10 @@ var _hmt = _hmt || [];
     
       <li>
         <a href="/2018/02/25/echarts的事件引入（一）/"  title="这篇文章是介绍echarts的折线图添加入事件" ><i class="fa fa-file-o"></i>echarts的事件引入（一）</a>
+      </li>
+    
+      <li>
+        <a href="/2018/02/24/使用github子目录部署hexo个人博客/" ><i class="fa fa-file-o"></i>使用github子目录部署hexo个人博客</a>
       </li>
     
   </ul>
